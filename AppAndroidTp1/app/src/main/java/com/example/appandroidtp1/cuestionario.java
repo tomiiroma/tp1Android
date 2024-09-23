@@ -1,5 +1,6 @@
 package com.example.appandroidtp1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class cuestionario extends AppCompatActivity {
     RadioButton rButton1,rButton2,rButton3,rButton4;
     TextView txtPreguntaNumero,txtPreguntaCompleta;
     Button btnConfirmar;
+    String nombreRecibido;
 
     int nPregunta = 1;
     int puntajeFinal = 0;
@@ -39,6 +41,8 @@ public class cuestionario extends AppCompatActivity {
 
         btnConfirmar = findViewById(R.id.btnConfirmar);
 
+        Intent i = getIntent();
+        nombreRecibido = i.getStringExtra("mensaje_key");
     }
 
 
@@ -49,7 +53,7 @@ public class cuestionario extends AppCompatActivity {
             Toast.makeText(this,"Elija una opcion ",Toast.LENGTH_SHORT).show();
 
         }else if(nPregunta==1){
-            if(rButton2.isChecked()){
+            if(rButton1.isChecked()){
                 puntajeFinal=puntajeFinal+1;
             }
 
@@ -135,10 +139,15 @@ public class cuestionario extends AppCompatActivity {
             if(rButton1.isChecked()){
                 puntajeFinal=puntajeFinal+1;
             }
-
+                Intent i = new Intent(this, actividad2.class);
+                i.putExtra("mensaje_key",nombreRecibido);
+                i.putExtra("puntos",puntajeFinal);
+                startActivity(i);
 
 
         }
+
+
 
     }
 
