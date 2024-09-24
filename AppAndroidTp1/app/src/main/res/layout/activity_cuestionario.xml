@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".cuestionario">
 
     <Button
@@ -12,10 +13,10 @@
         android:layout_width="305dp"
         android:layout_height="55dp"
         android:backgroundTint="@color/black"
-        android:onClick="avanzar"
-        android:text="Confirmar"
         android:textColor="@color/white"
         android:textSize="18dp"
+        android:text="Confirmar"
+        android:onClick="avanzar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,6 @@
         android:layout_width="143dp"
         android:layout_height="31dp"
         android:fontFamily="@font/fuente1"
-        android:text="Pregunta #1"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp"
@@ -43,7 +43,6 @@
         android:layout_height="177dp"
         android:fontFamily="@font/fuente1"
         android:textColor="@color/black"
-        android:text="¿Quién es el jugador latino que ha anotado más goles en la historia de los mundiales?"
         android:textAlignment="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +87,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fuente1"
-                android:text="Ronaldo Nazario (Brasil)"
                 android:textColor="@color/black"
                 android:textSize="18dp"
 
@@ -99,7 +97,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fuente1"
-                android:text="Gabriel Batistuta (Argentina)"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -108,7 +105,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fuente1"
-                android:text="Diego Maradona (Argentina)"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -117,7 +113,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fuente1"
-                android:text="Lionel Messi (Argentina)"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
         </RadioGroup>

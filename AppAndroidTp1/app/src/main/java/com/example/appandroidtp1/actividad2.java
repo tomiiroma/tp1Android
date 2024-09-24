@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class actividad2 extends AppCompatActivity {
 
@@ -42,13 +39,13 @@ public class actividad2 extends AppCompatActivity {
 
         if(puntajeFinal>=3){
             textViewGanador.setText("Felicidades "+nombreRecibido+" Ganaste!!");
-            textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal);
+            textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal+" puntos");
             imageViewGanador.setVisibility(View.VISIBLE);
             imageViewPerdedor.setVisibility(View.INVISIBLE);
 
         }else {
             textViewGanador.setText("Mala suerte ;( "+nombreRecibido+" Perdiste");
-            textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal);
+            textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal+" puntos");
             imageViewGanador.setVisibility(View.INVISIBLE);
             imageViewPerdedor.setVisibility(View.VISIBLE);
         }

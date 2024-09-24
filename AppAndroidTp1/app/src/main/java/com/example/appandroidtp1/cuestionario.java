@@ -61,7 +61,7 @@ public class cuestionario extends AppCompatActivity {
                         "Italia",
                         "Francia",
                         "Estados Unidos",
-                        "Alemania"}, 0));
+                        "Alemania"}, 1));
 
 
         rButton1 = findViewById(R.id.rButton1);
@@ -90,10 +90,12 @@ public class cuestionario extends AppCompatActivity {
             txtPreguntaNumero.setText("Pregunta " + (nPregunta + 1));
             txtPreguntaCompleta.setText(preguntaActual.getPregunta());
             String[] opciones = preguntaActual.getOpciones();
+
             rButton1.setText(opciones[0]);
             rButton2.setText(opciones[1]);
             rButton3.setText(opciones[2]);
             rButton4.setText(opciones[3]);
+
             rButton1.setChecked(false);
             rButton2.setChecked(false);
             rButton3.setChecked(false);
