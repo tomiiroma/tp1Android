@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,10 +26,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void otraActividad(View view){
-        String mensaje = editTextMensaje.getText().toString();
-        Intent i = new Intent(this, cuestionario.class);
-        i.putExtra("mensaje_key",mensaje);
-        startActivity(i);
+    public void irCuestionario(View view){
+        String nombre = editTextMensaje.getText().toString();
+
+        if(nombre.isEmpty()){
+            Toast.makeText(this,"Ingrese su nombre ",Toast.LENGTH_SHORT).show();
+
+        }else{
+            Intent i = new Intent(this, cuestionario.class);
+            i.putExtra("mensaje_key",nombre);
+            startActivity(i);
+        }
+
+
     }
 }

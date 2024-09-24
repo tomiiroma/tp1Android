@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class cuestionario extends AppCompatActivity {
 
     RadioButton rButton1,rButton2,rButton3,rButton4;
-    TextView txtPreguntaNumero,txtPreguntaCompleta;
+    TextView txtPreguntaNumero,txtPreguntaCompleta, textViewTuPuntaje;
     Button btnConfirmar;
     String nombreRecibido;
 
@@ -38,11 +38,16 @@ public class cuestionario extends AppCompatActivity {
 
         txtPreguntaNumero = findViewById(R.id.txtPreguntaNumero);
         txtPreguntaCompleta = findViewById(R.id.txtPreguntaCompleta);
+        textViewTuPuntaje = findViewById(R.id.textViewTuPuntaje);
 
         btnConfirmar = findViewById(R.id.btnConfirmar);
 
         Intent i = getIntent();
         nombreRecibido = i.getStringExtra("mensaje_key");
+
+
+        textViewTuPuntaje.setText("Tus Puntos: "+puntajeFinal);
+
     }
 
 
@@ -56,6 +61,9 @@ public class cuestionario extends AppCompatActivity {
             if(rButton1.isChecked()){
                 puntajeFinal=puntajeFinal+1;
             }
+
+            textViewTuPuntaje.setText("Tus Puntos: " + puntajeFinal);
+
 
             nPregunta = nPregunta+1;
             txtPreguntaNumero.setText("Pregunta 2");
@@ -75,17 +83,18 @@ public class cuestionario extends AppCompatActivity {
                 puntajeFinal=puntajeFinal+1;
             }
 
+            textViewTuPuntaje.setText("Tus Puntos: " + puntajeFinal);
+
             nPregunta = nPregunta+1;
 
             txtPreguntaNumero.setText("Pregunta 3");
-            txtPreguntaCompleta.setText("¿Cómo se le llamó a la famosa victoria de Uruguay sobre Brasil " +
-                    "en la final del torneo mundialista de 1950, " +
-                    "cuando los charrúas obtuvieron su segundo título mundial?");
+            txtPreguntaCompleta.setText("¿En qué año se celebró la primera " +
+                    "Copa Mundial de Fútbol?");
 
-            rButton1.setText("El triunfo del siglo");
-            rButton2.setText("El Maracanazo");
-            rButton3.setText("El Matabrasileirao");
-            rButton4.setText("El Chutazo");
+            rButton1.setText("1930");
+            rButton2.setText("1928");
+            rButton3.setText("1942");
+            rButton4.setText("1954");
 
             rButton1.setChecked(false);
             rButton2.setChecked(false);
@@ -94,9 +103,11 @@ public class cuestionario extends AppCompatActivity {
 
 
         }else if(nPregunta==3){
-            if(rButton2.isChecked()){
+            if(rButton1.isChecked()){
                 puntajeFinal=puntajeFinal+1;
             }
+
+            textViewTuPuntaje.setText("Tus Puntos: " + puntajeFinal);
 
             nPregunta = nPregunta+1;
 
@@ -118,6 +129,8 @@ public class cuestionario extends AppCompatActivity {
             if(rButton2.isChecked()){
                 puntajeFinal=puntajeFinal+1;
             }
+
+            textViewTuPuntaje.setText("Tus Puntos: " + puntajeFinal);
 
             nPregunta = nPregunta+1;
 

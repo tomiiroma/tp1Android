@@ -7,30 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".cuestionario">
 
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="305dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:onClick="avanzar"
+        android:text="Confirmar"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926" />
+
     <TextView
         android:id="@+id/txtPreguntaNumero"
         android:layout_width="143dp"
         android:layout_height="31dp"
+        android:fontFamily="@font/fuente1"
         android:text="Pregunta #1"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/txtPreguntaCompleta"
-        android:layout_width="245dp"
-        android:layout_height="49dp"
+        android:layout_width="313dp"
+        android:layout_height="177dp"
+        android:fontFamily="@font/fuente1"
+        android:textColor="@color/black"
         android:text="¿Quién es el jugador latino que ha anotado más goles en la historia de los mundiales?"
         android:textAlignment="center"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintVertical_bias="0.234" />
+
+    <TextView
+        android:id="@+id/textViewTuPuntaje"
+        android:layout_width="291dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/fuente1"
+        android:text="Tus Puntos: "
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -40,7 +75,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPreguntaCompleta">
+        app:layout_constraintTop_toBottomOf="@+id/txtPreguntaCompleta"
+        app:layout_constraintVertical_bias="0.069">
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -51,37 +87,41 @@
                 android:id="@+id/rButton1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ronaldo Nazario (Brasil)" />
+                android:fontFamily="@font/fuente1"
+                android:text="Ronaldo Nazario (Brasil)"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+
+                />
 
             <RadioButton
                 android:id="@+id/rButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gabriel Batistuta (Argentina)" />
+                android:fontFamily="@font/fuente1"
+                android:text="Gabriel Batistuta (Argentina)"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <RadioButton
                 android:id="@+id/rButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diego Maradona (Argentina)" />
+                android:fontFamily="@font/fuente1"
+                android:text="Diego Maradona (Argentina)"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <RadioButton
                 android:id="@+id/rButton4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lionel Messi (Argentina)" />
+                android:fontFamily="@font/fuente1"
+                android:text="Lionel Messi (Argentina)"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
         </RadioGroup>
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnConfirmar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="avanzar"
-        android:text="Confirmar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
