@@ -8,6 +8,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.LinkedList;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class cuestionario extends AppCompatActivity {
+
+
+    LinkedList<Pregunta> preguntas;
 
     RadioButton rButton1,rButton2,rButton3,rButton4;
     TextView txtPreguntaNumero,txtPreguntaCompleta, textViewTuPuntaje;
@@ -31,6 +36,40 @@ public class cuestionario extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cuestionario);
 
+        preguntas = new LinkedList<>();
+
+        preguntas.add(new Pregunta("¿Quién es el jugador latino que ha anotado más goles en la historia de los mundiales?",
+                new String[]{
+                        "Ronaldo Nazario (Brasil)",
+                        "Gabriel Batistuta (Argentina)",
+                        "Diego Maradona (Argentina)",
+                        "Lionel Messi (Argentina)"}, 0));
+
+
+        preguntas.add(new Pregunta("¿Cómo se llamó la mascota de la Copa Mundial de 1982 en España?",
+                new String[]{"Ronaldo Nazario (Brasil)",
+                        "Fuleco",
+                        "Pique",
+                        "Naranjito"}, 3));
+
+
+        preguntas.add(new Pregunta("¿En qué año se celebró la primera Copa Mundial de Fútbol?",
+                new String[]{
+                        "1930",
+                        "1960",
+                        "1956",
+                        "1938"}, 0));
+
+
+
+        preguntas.add(new Pregunta("¿Dónde se disputó la Copa Mundial de 1998?",
+                new String[]{
+                        "Italia",
+                        "Francia",
+                        "Estados Unidos",
+                        "Alemania"}, 0));
+
+
         rButton1 = findViewById(R.id.rButton1);
         rButton2 = findViewById(R.id.rButton2);
         rButton3 = findViewById(R.id.rButton3);
@@ -39,16 +78,24 @@ public class cuestionario extends AppCompatActivity {
         txtPreguntaNumero = findViewById(R.id.txtPreguntaNumero);
         txtPreguntaCompleta = findViewById(R.id.txtPreguntaCompleta);
         textViewTuPuntaje = findViewById(R.id.textViewTuPuntaje);
-
         btnConfirmar = findViewById(R.id.btnConfirmar);
-
         Intent i = getIntent();
         nombreRecibido = i.getStringExtra("mensaje_key");
+        textViewTuPuntaje.setText("Tus Puntos: " + puntajeFinal);
 
 
-        textViewTuPuntaje.setText("Tus Puntos: "+puntajeFinal);
 
+        mostrarPregunta();
     }
+
+
+    public void mostrarPregunta(){
+
+        if(){
+
+        }
+    }
+
 
 
     public void avanzar(View view){
