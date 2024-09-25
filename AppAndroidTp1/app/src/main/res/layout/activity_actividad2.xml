@@ -8,34 +8,37 @@
     android:background="@color/white"
     tools:context=".actividad2">
 
+
     <TextView
         android:id="@+id/textViewGanador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ganaste"
-        android:visibility="invisible"
+        android:layout_width="286dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/fuente1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.682" />
 
     <Button
         android:id="@+id/buttonVolver"
-        android:onClick="volver"
         android:layout_width="305dp"
         android:layout_height="55dp"
         android:backgroundTint="@color/black"
+        android:onClick="volver"
+        android:text="Volver"
         android:textColor="@color/white"
         android:textSize="18dp"
-        android:text="Volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
-
+        app:layout_constraintVertical_bias="0.832" />
 
     <ImageView
         android:id="@+id/imageViewGanador"
@@ -77,6 +80,6 @@
         app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.732" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

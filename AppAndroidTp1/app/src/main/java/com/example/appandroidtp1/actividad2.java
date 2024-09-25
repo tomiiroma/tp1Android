@@ -38,13 +38,13 @@ public class actividad2 extends AppCompatActivity {
         buttonVolver = findViewById(R.id.buttonVolver);
 
         if(puntajeFinal>=3){
-            textViewGanador.setText("Felicidades "+nombreRecibido+" Ganaste!!");
+            textViewGanador.setText("Felicidades "+nombreRecibido);
             textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal+" puntos");
             imageViewGanador.setVisibility(View.VISIBLE);
             imageViewPerdedor.setVisibility(View.INVISIBLE);
 
         }else {
-            textViewGanador.setText("Mala suerte ;( "+nombreRecibido+" Perdiste");
+            textViewGanador.setText("Mala suerte ;( "+nombreRecibido);
             textViewPuntaje.setText("Tu puntaje final es: "+puntajeFinal+" puntos");
             imageViewGanador.setVisibility(View.INVISIBLE);
             imageViewPerdedor.setVisibility(View.VISIBLE);
